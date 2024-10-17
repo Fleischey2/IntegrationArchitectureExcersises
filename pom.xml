@@ -30,7 +30,6 @@
         <scope>test</scope>
     </dependency>
 
-
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-legacy</artifactId>
