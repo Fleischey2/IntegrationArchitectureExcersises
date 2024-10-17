@@ -3,17 +3,17 @@ package de.hbrs.ia.code;
 import de.hbrs.ia.model.SalesMan;
 import de.hbrs.ia.model.SocialPerformanceRecord;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ManagePersonalControl implements ManagePersonal {
 
-    private List<SalesMan> allSalesMen;
+    private List<SalesMan> allSalesMen = new ArrayList<>();
 
     @Override
     public void createSalesMan(SalesMan record) {
         allSalesMen.add(record);
     }
-
 
     @Override
     public SalesMan readSalesMan(int sid) {
