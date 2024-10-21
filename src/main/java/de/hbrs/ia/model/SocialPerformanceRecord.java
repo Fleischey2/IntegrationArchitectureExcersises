@@ -7,12 +7,18 @@ import org.bson.Document;
 
 public class SocialPerformanceRecord {
 
-    private SingleRecord leadershipCompetence;
-    private SingleRecord opennessToEmployee;
-    private SingleRecord socialBehaviourToEmployee;
-    private SingleRecord attitudeTowardsClient;
-    private SingleRecord communicationSkills;
-    private SingleRecord integrityToCompany;
+    private Record leadershipCompetence;
+    private Record opennessToEmployee;
+    private Record socialBehaviourToEmployee;
+    private Record attitudeTowardsClient;
+    private Record communicationSkills;
+    private Record integrityToCompany;
+    private Integer sid;
+    private Integer totalBonus;
+    private Double averageTargetValue;
+    private Double averageActualTargetValue;
+    private String remarks;
+    private Integer yearOfPerformance;
 
     private Document toDocument(){
         org.bson.Document document = new Document();
@@ -27,7 +33,7 @@ public class SocialPerformanceRecord {
     }
 
 
-    private class SingleRecord {
+    private class Record {
 
         private int targetValue;
         private int actualValue;
@@ -51,10 +57,6 @@ public class SocialPerformanceRecord {
 
         public int getBonus() {
             return bonus;
-        }
-
-        public void setBonus(int bonus) {
-            this.bonus = bonus;
         }
 
         public Document toDocument() {

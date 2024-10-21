@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc444fa-1b42-403b-8ced-cc62bc755250" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Laptop Freigabe/Uni/Integration Architecture/IntegrationArchitectureExcersises&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MongoDBControlTest.createSocialPerformanceRecord">
     <configuration name="MongoDBControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.hbrs.ia.database.MongoDBControl" />
       <module name="MongoDBStart" />
@@ -71,8 +73,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MongoDBControlTest.createSocialPerformanceRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MongoDBStart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MongoDBControlTest" />
+      <option name="METHOD_NAME" value="createSocialPerformanceRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MongoDBControlTest.createSocialPerformanceRecord" />
         <item itemvalue="Application.MongoDBControl" />
       </list>
     </recent_temporary>
