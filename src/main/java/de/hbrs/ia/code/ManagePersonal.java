@@ -12,7 +12,7 @@ public interface ManagePersonal {
 
     public void createSalesMan( SalesMan record );
 
-    //public void addSocialPerformanceRecord(SocialPerformanceRecord record , SalesMan salesMan );
+    public void addSocialPerformanceRecord(SocialPerformanceRecord record , SalesMan salesMan );
     // Remark: an SocialPerformanceRecord corresponds to part B of a bonus sheet
 
     public SalesMan readSalesMan( int sid );
@@ -24,7 +24,7 @@ public interface ManagePersonal {
     //The missing CRUD operation - delete a SalesMan
     public SalesMan deleteSalesMan( int sid );
 
-    // public List<SocialPerformanceRecord> readSocialPerformanceRecord( SalesMan salesMan );
+    public List<SocialPerformanceRecord> readSocialPerformanceRecord( SalesMan salesMan );
     // Remark: How do you integrate the year?
 
 }

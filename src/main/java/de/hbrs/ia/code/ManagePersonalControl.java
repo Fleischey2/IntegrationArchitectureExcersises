@@ -16,6 +16,11 @@ public class ManagePersonalControl implements ManagePersonal {
     }
 
     @Override
+    public void addSocialPerformanceRecord(SocialPerformanceRecord record, SalesMan salesMan) {
+
+    }
+
+    @Override
     public SalesMan readSalesMan(int sid) {
         for(SalesMan salesMan : allSalesMen) {
 
@@ -42,6 +47,11 @@ public class ManagePersonalControl implements ManagePersonal {
             }
 
         }
+        return null;
+    }
+
+    @Override
+    public List<SocialPerformanceRecord> readSocialPerformanceRecord(SalesMan salesMan) {
         return null;
     }
 
