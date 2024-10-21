@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc444fa-1b42-403b-8ced-cc62bc755250" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/Factory/SalesManFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/Factory/SocialPerformanceRecordFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/ManagePersonalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/database/MongoDBControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/database/MongoDBControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/database/MongoDBControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,129 +30,64 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Fleischey2&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Fleischey2"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/aldaGit/mongodbstart.git&quot;,
-    &quot;accountId&quot;: &quot;ab05fce2-96ed-4645-a8cd-bf46ca29a847&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/aldaGit/mongodbstart.git",
+    "accountId": "ab05fce2-96ed-4645-a8cd-bf46ca29a847"
   }
-}</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2nYTHaUoyZXhFo2oNswE1VQdMQT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MongoDBControl.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Laptop Freigabe/Uni/Integration Architecture/IntegrationArchitectureExcersises&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MongoDBControl.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="ManagePersonalTest.addSocialPerformanceRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MongoDBControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.hbrs.ia.database.MongoDBControl" />
       <module name="MongoDBStart" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="de.hbrs.ia.database.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
-      <option name="METHOD_NAME" value="addSocialPerformanceRecord" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagePersonalTest.createSalesMan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MongoDBStart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
-      <option name="METHOD_NAME" value="createSalesMan" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagePersonalTest.deletePerformanceRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MongoDBStart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
-      <option name="METHOD_NAME" value="deletePerformanceRecords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagePersonalTest.deleteSalesMan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MongoDBStart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
-      <option name="METHOD_NAME" value="deleteSalesMan" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagePersonalTest.fullCRUD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MongoDBStart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
-      <option name="METHOD_NAME" value="fullCRUD" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ManagePersonalTest.fullCRUD" />
-        <item itemvalue="JUnit.ManagePersonalTest.deletePerformanceRecords" />
-        <item itemvalue="JUnit.ManagePersonalTest.addSocialPerformanceRecord" />
-        <item itemvalue="JUnit.ManagePersonalTest.createSalesMan" />
-        <item itemvalue="JUnit.ManagePersonalTest.deleteSalesMan" />
+        <item itemvalue="Application.MongoDBControl" />
       </list>
     </recent_temporary>
   </component>
