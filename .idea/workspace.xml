@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc444fa-1b42-403b-8ced-cc62bc755250" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/Factory/SalesManFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/Factory/SocialPerformanceRecordFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/ManagePersonalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/database/MongoDBControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/database/MongoDBControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,21 +65,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Laptop Freigabe/Uni/Integration Architecture/IntegrationArchitectureExcersises&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.MongoDBControlTest.createSocialPerformanceRecord">
-    <configuration name="MongoDBControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.hbrs.ia.database.MongoDBControl" />
-      <module name="MongoDBStart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.hbrs.ia.database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MongoDBControlTest.createSocialPerformanceRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="ManagePersonalTest.addSocialPerformanceRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MongoDBStart" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +75,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.MongoDBControlTest" />
-      <option name="METHOD_NAME" value="createSocialPerformanceRecord" />
+      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
+      <option name="METHOD_NAME" value="addSocialPerformanceRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagePersonalTest.createSalesMan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MongoDBStart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
+      <option name="METHOD_NAME" value="createSalesMan" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagePersonalTest.deletePerformanceRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MongoDBStart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
+      <option name="METHOD_NAME" value="deletePerformanceRecords" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagePersonalTest.deleteSalesMan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MongoDBStart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
+      <option name="METHOD_NAME" value="deleteSalesMan" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagePersonalTest.fullCRUD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MongoDBStart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ManagePersonalTest" />
+      <option name="METHOD_NAME" value="fullCRUD" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,8 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MongoDBControlTest.createSocialPerformanceRecord" />
-        <item itemvalue="Application.MongoDBControl" />
+        <item itemvalue="JUnit.ManagePersonalTest.fullCRUD" />
+        <item itemvalue="JUnit.ManagePersonalTest.deletePerformanceRecords" />
+        <item itemvalue="JUnit.ManagePersonalTest.addSocialPerformanceRecord" />
+        <item itemvalue="JUnit.ManagePersonalTest.createSalesMan" />
+        <item itemvalue="JUnit.ManagePersonalTest.deleteSalesMan" />
       </list>
     </recent_temporary>
   </component>

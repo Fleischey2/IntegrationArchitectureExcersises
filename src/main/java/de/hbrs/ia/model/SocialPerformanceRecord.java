@@ -20,20 +20,62 @@ public class SocialPerformanceRecord {
     private String remarks;
     private Integer yearOfPerformance;
 
-    private Document toDocument(){
+    public int getTotalBonus() {
+
+        return leadershipCompetence.getBonus()
+                + opennessToEmployee.getBonus()
+                + socialBehaviourToEmployee.getBonus()
+                + attitudeTowardsClient.getBonus()
+                + communicationSkills.getBonus()
+                + integrityToCompany.getBonus();
+
+
+    }
+
+    public Double getAverageTargetValue() {
+        return (((double) leadershipCompetence.getTargetValue()
+                + (double) opennessToEmployee.getTargetValue()
+                + (double) socialBehaviourToEmployee.getTargetValue()
+                + (double) attitudeTowardsClient.getTargetValue()
+                + (double) communicationSkills.getTargetValue()
+                + (double) integrityToCompany.getTargetValue())
+                / 6);
+
+
+    }
+
+    public Double getAverageActualTargetValue() {
+        return (((double) leadershipCompetence.getActualValue()
+                + (double) opennessToEmployee.getActualValue()
+                + (double) socialBehaviourToEmployee.getActualValue()
+                + (double) attitudeTowardsClient.getActualValue()
+                + (double) communicationSkills.getActualValue()
+                + (double) integrityToCompany.getActualValue())
+                / 6);
+
+
+    }
+
+    public Document toDocument() {
         org.bson.Document document = new Document();
-        document.append("LeadershipCompetence", this.leadershipCompetence);
-        document.append("OpennessToEmployee", this.opennessToEmployee);
-        document.append("SocialBehaviourToEmployee", this.socialBehaviourToEmployee);
-        document.append("AttitudeTowardsClient", this.attitudeTowardsClient);
-        document.append("CommunicationSkills", this.communicationSkills);
-        document.append("IntegrityToCompany", this.integrityToCompany);
+        document.append("LeadershipCompetence", this.leadershipCompetence.toDocument());
+        document.append("OpennessToEmployee", this.opennessToEmployee.toDocument());
+        document.append("SocialBehaviourToEmployee", this.socialBehaviourToEmployee.toDocument());
+        document.append("AttitudeTowardsClient", this.attitudeTowardsClient.toDocument());
+        document.append("CommunicationSkills", this.communicationSkills.toDocument());
+        document.append("IntegrityToCompany", this.integrityToCompany.toDocument());
+        document.append("sid", this.sid);
+        document.append("totalBonus", this.getTotalBonus());
+        document.append("averageTargetValue", this.getAverageTargetValue());
+        document.append("remarks", this.remarks);
+        document.append("averageActualTargetValue", this.getAverageActualTargetValue());
+        document.append("yearOfPerformance", this.yearOfPerformance);
 
         return document;
     }
 
 
-    private class Record {
+    public static class Record {
 
         private int targetValue;
         private int actualValue;
@@ -45,6 +87,10 @@ public class SocialPerformanceRecord {
 
         public void setTargetValue(int targetValue) {
             this.targetValue = targetValue;
+        }
+
+        public void setBonus(int bonus) {
+            this.bonus = bonus;
         }
 
         public int getActualValue() {
@@ -68,4 +114,78 @@ public class SocialPerformanceRecord {
         }
     }
 
+    //Getter & Setter
+
+
+    public Record getLeadershipCompetence() {
+        return this.leadershipCompetence;
+    }
+
+    public void setLeadershipCompetence(Record leadershipCompetence) {
+        this.leadershipCompetence = leadershipCompetence;
+    }
+
+    public Record getOpennessToEmployee() {
+        return opennessToEmployee;
+    }
+
+    public void setOpennessToEmployee(Record opennessToEmployee) {
+        this.opennessToEmployee = opennessToEmployee;
+    }
+
+    public Record getSocialBehaviourToEmployee() {
+        return socialBehaviourToEmployee;
+    }
+
+    public void setSocialBehaviourToEmployee(Record socialBehaviourToEmployee) {
+        this.socialBehaviourToEmployee = socialBehaviourToEmployee;
+    }
+
+    public Record getAttitudeTowardsClient() {
+        return attitudeTowardsClient;
+    }
+
+    public void setAttitudeTowardsClient(Record attitudeTowardsClient) {
+        this.attitudeTowardsClient = attitudeTowardsClient;
+    }
+
+    public Record getCommunicationSkills() {
+        return communicationSkills;
+    }
+
+    public void setCommunicationSkills(Record communicationSkills) {
+        this.communicationSkills = communicationSkills;
+    }
+
+    public Record getIntegrityToCompany() {
+        return integrityToCompany;
+    }
+
+    public void setIntegrityToCompany(Record integrityToCompany) {
+        this.integrityToCompany = integrityToCompany;
+    }
+
+    public Integer getSid() {
+        return sid;
+    }
+
+    public void setSid(Integer sid) {
+        this.sid = sid;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public Integer getYearOfPerformance() {
+        return yearOfPerformance;
+    }
+
+    public void setYearOfPerformance(Integer yearOfPerformance) {
+        this.yearOfPerformance = yearOfPerformance;
+    }
 }

@@ -1,5 +1,6 @@
 package de.hbrs.ia.code;
 
+import de.hbrs.ia.database.MongoDBControl;
 import de.hbrs.ia.model.SalesMan;
 import de.hbrs.ia.model.SocialPerformanceRecord;
 
@@ -7,52 +8,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManagePersonalControl implements ManagePersonal {
-
-    private List<SalesMan> allSalesMen = new ArrayList<>();
+    private MongoDBControl mongoDBControl = new MongoDBControl();
 
     @Override
     public void createSalesMan(SalesMan record) {
-        allSalesMen.add(record);
+        mongoDBControl.addSalesMan(record.toDocument());
+
     }
 
     @Override
     public void addSocialPerformanceRecord(SocialPerformanceRecord record, SalesMan salesMan) {
-
+        record.setSid(salesMan.getId());
+        mongoDBControl.addSocialPerformanceRecord(record.toDocument());
     }
 
     @Override
     public SalesMan readSalesMan(int sid) {
-        for(SalesMan salesMan : allSalesMen) {
-
-            if(sid == salesMan.getId()) {
-                return salesMan;
-            }
-
-        }
-        return null;
+        return mongoDBControl.getSalesManById(sid);
     }
 
     @Override
     public List<SalesMan> readAllSalesMen() {
-        return allSalesMen;
+        return mongoDBControl.getAllSalesMen();
     }
 
     @Override
-    public SalesMan deleteSalesMan(int sid) {
-        for(SalesMan salesMan : allSalesMen) {
-
-            if(sid == salesMan.getId()) {
-                allSalesMen.remove(salesMan);
-                return salesMan;
-            }
-
-        }
-        return null;
+    public void deleteSalesMan(int sid) {
+        mongoDBControl.deleteSalesMan(sid);
     }
 
     @Override
     public List<SocialPerformanceRecord> readSocialPerformanceRecord(SalesMan salesMan) {
-        return null;
+        return mongoDBControl.getSocialPerformanceRecordsBySID(salesMan.getId());
+    }
+
+    @Override
+    public void deletePerformanceRecords(int sid) {
+        mongoDBControl.deletePerformanceRecords(sid);
     }
 
 }

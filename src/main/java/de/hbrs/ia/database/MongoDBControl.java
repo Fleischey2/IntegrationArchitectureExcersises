@@ -2,13 +2,21 @@ package de.hbrs.ia.database;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import de.hbrs.ia.code.Factory.SalesManFactory;
+import de.hbrs.ia.code.Factory.SocialPerformanceRecordFactory;
 import de.hbrs.ia.model.SalesMan;
+import de.hbrs.ia.model.SocialPerformanceRecord;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.mongodb.client.model.Filters.eq;
 
 public class MongoDBControl {
 
@@ -21,7 +29,7 @@ public class MongoDBControl {
 
     public void bulkAddSalesMen(List<SalesMan> salesMen) {
         List<Document> records = new ArrayList<>();
-        for(SalesMan salesMan : salesMen) {
+        for (SalesMan salesMan : salesMen) {
             records.add(salesMan.toDocument());
         }
         salesmenCollection.insertMany(records);
@@ -31,23 +39,50 @@ public class MongoDBControl {
         salesmenCollection.insertOne(record);
     }
 
-    public void deleteSalesMan(Document record) {
-        salesmenCollection.deleteOne(record);
+    public void addSocialPerformanceRecord(Document record) {
+        performanceCollection.insertOne(record);
+    }
+
+    public void deleteSalesMan(int sid) {
+        Bson query = eq("sid", sid);
+        salesmenCollection.deleteOne(query) ;
+
+    }
+    public void deletePerformanceRecords(int sid){
+        Bson query = eq("sid", sid);
+        performanceCollection.deleteMany(query);
+
     }
 
     public SalesMan getSalesManById(int sid) {
         Document searchParameter = new Document().append("sid", sid);
-        Document foundSalesMan = (Document) salesmenCollection.find(searchParameter);
-        if(!(foundSalesMan.get("sid") == null)) {
-            return new SalesMan(foundSalesMan.getString("firstname"),
-                    foundSalesMan.getString("lastname"),
-                    foundSalesMan.getInteger("sid"));
+        Document foundSalesMan = salesmenCollection.find(searchParameter).first();
+        if (foundSalesMan != null) {
+            return SalesManFactory.getInstance().convertFromDocument(foundSalesMan);
         }
 
         return null;
 
     }
 
+    public List<SalesMan> getAllSalesMen() {
+        FindIterable<Document> foundRecords = salesmenCollection.find();
+        ArrayList<SalesMan> allRecords = new ArrayList<>();
+        foundRecords.forEach(record -> allRecords.add(SalesManFactory.getInstance().convertFromDocument(record)));
+
+        return allRecords;
+
+    }
+
+    public List<SocialPerformanceRecord> getSocialPerformanceRecordsBySID(int sid) {
+        Document searchParameter = new Document().append("sid", sid);
+
+        FindIterable<Document> foundRecords = performanceCollection.find(searchParameter);
+        ArrayList<SocialPerformanceRecord> allRecords = new ArrayList<>();
+        foundRecords.forEach(record -> allRecords.add(SocialPerformanceRecordFactory.getInstance().convertFromDocument(record)));
+
+        return allRecords;
+    }
 
 
 }

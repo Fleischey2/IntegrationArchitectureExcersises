@@ -22,9 +22,11 @@ public interface ManagePersonal {
 
     //Assignment 2 b)
     //The missing CRUD operation - delete a SalesMan
-    public SalesMan deleteSalesMan( int sid );
+    public void deleteSalesMan( int sid );
+
 
     public List<SocialPerformanceRecord> readSocialPerformanceRecord( SalesMan salesMan );
     // Remark: How do you integrate the year?
 
+    public void deletePerformanceRecords( int sid );
 }
