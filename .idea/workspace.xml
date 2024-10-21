@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc444fa-1b42-403b-8ced-cc62bc755250" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/MongoDBControlTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/code/ManagePersonalControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hbrs/ia/model/SocialPerformanceRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/hbrs/ia/code/ManagePersonal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/hbrs/ia/code/ManagePersonal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/hbrs/ia/code/ManagePersonalControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/hbrs/ia/code/ManagePersonalControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/hbrs/ia/database/MongoDBControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/hbrs/ia/database/MongoDBControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/hbrs/ia/model/SocialPerformanceRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/hbrs/ia/model/SocialPerformanceRecord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
