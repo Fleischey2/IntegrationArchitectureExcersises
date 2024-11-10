@@ -1,0 +1,1479 @@
+{
+	"info": {
+		"_postman_id": "a7e565d0-3ce0-4ddd-9bff-afb42706af67",
+		"name": "Integration Architectures",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22217088"
+	},
+	"item": [
+		{
+			"name": "OrangeHRM",
+			"item": [
+				{
+					"name": "getToken",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "api_oauth_id",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "oauth_secret",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/oauth/issueToken",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"oauth",
+								"issueToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/search",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizationInformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/organization",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeDepends",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/dependent",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"dependent"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeJobDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/job-detail",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"job-detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeSupervisor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/supervisor",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"supervisor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeWorkExperience",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/work-experience",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"work-experience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeEducation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/education",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employeeCustomFields",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/custom-field",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"custom-field"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmployeePhoto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/photo",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LeaveTypes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/leave/type",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"leave",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LeavePeriod",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/leave/period",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"leave",
+								"period"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LeaveEntitlement",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/entitlement?fromDate=2022-02-02&toDate=2024-02-02",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"entitlement"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2022-02-02"
+								},
+								{
+									"key": "toDate",
+									"value": "2024-02-02"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LeaveRequests",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/leave/search?fromDate=2017-02-02&toDate=2024-02-02",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"leave",
+								"search"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2017-02-02"
+								},
+								{
+									"key": "toDate",
+									"value": "2024-02-02"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmployeeLeaveRequest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/leave-request",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"leave-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KPIS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "{{OrangeHRM_Username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{OrangeHRM_Password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/kpis",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"kpis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/customer",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActiities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/activity?id=1",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/project",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTimeSheets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OragneHRM_BASE_URL}}/api/v1/employee/{{OrangeHRM_Employee_ID}}/timesheet?startDate=2022-02-02",
+							"host": [
+								"{{OragneHRM_BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"{{OrangeHRM_Employee_ID}}",
+								"timesheet"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2022-02-02"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{OrangeHRM_Bearer}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"// Receives THe Bearer Token and Saves it as a Collection Variable\r",
+							"try {\r",
+							"    var response = await pm.sendRequest({\r",
+							"        url: \"https://sepp-hrm.inf.h-brs.de/symfony/web/index.php/oauth/issueToken\",\r",
+							"        method: \"POST\",\r",
+							"        body: {\r",
+							"        mode: \"formdata\",\r",
+							"        formdata: [\r",
+							"            {key: \"client_id\", value: \"api_oauth_id\"},\r",
+							"            {key: \"client_secret\", value: \"oauth_secret\"},\r",
+							"            {key: \"grant_type\", value: \"password\"},\r",
+							"            {key: \"username\", value: pm.collectionVariables.get(\"OrangeHRM_Username\")},\r",
+							"            {key: \"password\", value: pm.collectionVariables.get(\"OrangeHRM_Password\")}\r",
+							"\r",
+							"        ]\r",
+							"        \r",
+							"    } \r",
+							"    }\r",
+							");\r",
+							"    console.log(response.json());\r",
+							"    var responseJson = response.json();\r",
+							"    pm.environment.set(\"OrangeHRM_Bearer\", responseJson.access_token);\r",
+							"    console.log(\"OrangeHRM_Bearer: \"+ responseJson.access_token);\r",
+							"} catch (err) {\r",
+							"    console.error(err);\r",
+							"}\r",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "OpenCRX",
+			"item": [
+				{
+					"name": "accessHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/accessHistory?size=5&position=1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"accessHistory"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "position",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accessHistoryID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/accessHistory/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"accessHistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alert",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/alert",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"alert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alertID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/alert/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"alert",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asignedActivity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/assignedActivity",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"assignedActivity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asignedActivityID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/assignedActivity/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"assignedActivity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asignedContract",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/assignedContract",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"assignedContract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asignedContractID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}//assignedContract/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"",
+								"assignedContract",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "audit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/audit",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"audit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auditID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/audit/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"audit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/chart",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"chart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chartID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/chart/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"chart",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eMailAccount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/eMailAccount",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"eMailAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eMailAccountID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/eMailAccount/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"eMailAccount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "objectFinder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/objectFinder",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"objectFinder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "objectFinder Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/objectFinder",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"objectFinder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "propertySet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/propertySet",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"propertySet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "propertySetID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/propertySet/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"propertySet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "quickAccess",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/quickAccess",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"quickAccess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "quickAccessID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/quickAccess/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"quickAccess",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/subscription",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"subscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptionID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/subscription/ID",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"subscription",
+								"ID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "syncProfile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/syncProfile",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"syncProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "syncProfileID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/syncProfile/Calendar",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"syncProfile",
+								"Calendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "timer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/timer",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"timer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "timerID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/timer/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"timer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wfProcessInstance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/wfProcessInstance",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"wfProcessInstance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wfProcessInstanceID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/wfProcessInstance/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"wfProcessInstance",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/workList",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"workList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workListID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{OpenCRX_BASE_URL}}/workList/1",
+							"host": [
+								"{{OpenCRX_BASE_URL}}"
+							],
+							"path": [
+								"workList",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "guest",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "guest",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "OrangeHRM_Bearer",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "OrangeHRM_Username",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "OrangeHRM_Password",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "OragneHRM_BASE_URL",
+			"value": "https://sepp-hrm.inf.h-brs.de/symfony/web/index.php",
+			"type": "string"
+		},
+		{
+			"key": "OrangeHRM_Employee_ID",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "OpenCRX_BASE_URL",
+			"value": "https://sepp-crm.inf.h-brs.de/opencrx-rest-CRX/org.opencrx.kernel.home1/provider/CRX/segment/Standard/userHome/guest",
+			"type": "string"
+		}
+	]
+}
