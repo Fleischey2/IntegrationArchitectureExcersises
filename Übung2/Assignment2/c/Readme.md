@@ -5,7 +5,7 @@ The implementation of the Bearer Authentication for Postman can be found in the 
 ```
 requestBearerTokenOrangeHRM.js
 ```
-in this directory.
+in this directory. It is set as a Pre-Script in Postman prior to the OrangeHRM-Collection Run.
 
 ### Password
 The implemenation of the Password authorization is done in Postman itself. <br> 
